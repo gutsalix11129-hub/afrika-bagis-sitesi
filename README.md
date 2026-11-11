@@ -1,1 +1,1 @@
-# afrika-bagis-sitesi
+gazze-umut-bagıs-site
