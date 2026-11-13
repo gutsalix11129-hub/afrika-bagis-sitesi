@@ -1,1 +1,1 @@
-gazze-umut-bagıs-site
+afrika-bagıs-site
