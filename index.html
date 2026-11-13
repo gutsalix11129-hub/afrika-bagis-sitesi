@@ -2,490 +2,602 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gazze'ye Umut | Bir Öğün, Bir Umut</title>
-<meta name="description" content="Gazze'de açlıkla, susuzlukla ve yıkımla mücadele eden çocuklara destek ol. 350₺'den başlayan paketlerle bir çocuğun sofrasına dokun.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%B5%F0%9F%87%B8%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afrika'ya Umut | Bir Öğün, Bir Hayat</title>
+<meta name="description" content="Afrika'da açlıkla mücadele eden çocuklara destek ol. 350₺'den başlayan paketlerle bir çocuğun sofrasına dokun.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%9B%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--o:#E8632A;--od:#C94E1B;--g:#E8B04B;--ink:#1A120E;--mut:#7A6B5F;--bg:#FAF3EA;--card:#fff;--ln:#E8DAC9;--dk:#14100C;--dk2:#1E1813}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s;border-bottom:1px solid transparent}
-header.sc{background:rgba(20,16,12,.94);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}
-.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--o),var(--g));display:grid;place-items:center;font-size:19px;box-shadow:0 6px 16px rgba(232,99,42,.4)}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{color:rgba(255,255,255,.78);text-decoration:none;font-weight:600;font-size:.9rem;transition:.2s}
-.nav-links a:hover{color:var(--g)}
-.nav-cta{background:linear-gradient(135deg,var(--o),var(--od));color:#fff!important;padding:11px 22px;border-radius:999px;font-weight:700;box-shadow:0 8px 22px rgba(232,99,42,.4)}
-.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
-.burger span{display:block;width:24px;height:2.5px;background:#fff;border-radius:2px;margin:5px 0}
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 0 80px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.55),rgba(20,16,12,.88) 60%,rgba(20,16,12,.97)),url('https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=2000&auto=format&fit=crop') center/cover;animation:zz 22s ease-in-out infinite alternate}
-@keyframes zz{to{transform:scale(1.08)}}
-.hero-c{position:relative;z-index:1;text-align:center;max-width:820px;margin:0 auto;color:#fff;padding:0 22px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:9px 18px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--g);text-transform:uppercase;margin-bottom:26px;backdrop-filter:blur(10px)}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--o);animation:pl 2s infinite}
-@keyframes pl{50%{opacity:.4;transform:scale(1.4)}}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.4vw,3.8rem);line-height:1.1;margin-bottom:24px;font-weight:600}
-.hero h1 em{font-style:italic;color:var(--g)}
-.hero p.lead{font-size:clamp(1rem,1.9vw,1.15rem);color:rgba(255,255,255,.8);max-width:620px;margin:0 auto 36px;line-height:1.8}
-.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;font-size:.98rem;font-weight:700;text-decoration:none;transition:.25s}
-.btn-p{background:linear-gradient(135deg,var(--o),var(--od));color:#fff;box-shadow:0 14px 34px rgba(232,99,42,.5)}
-.btn-p:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(232,99,42,.6)}
-.btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
-.btn-o:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);transform:translateY(-3px)}
-.stats-bar{background:var(--dk);color:#fff;padding:56px 0;position:relative}
-.stats-bar::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,176,75,.5),transparent)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.stat{text-align:center;padding:8px 18px}
-.stat+.stat{border-left:1px solid rgba(255,255,255,.1)}
-.stat b{display:block;font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;color:var(--g);line-height:1;margin-bottom:8px}
-.stat span{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:600}
-section{padding:92px 0}
-.sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
-.tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--o);margin-bottom:16px}
-.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px}
-.sec-head h2 em{font-style:italic;color:var(--o)}
-.sec-head p{color:var(--mut);font-size:1rem;line-height:1.75}
-.story{background:var(--dk2);color:#fff}
-.story-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
-.story-img{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 80px rgba(0,0,0,.5);position:relative}
-.story-img img{width:100%;height:100%;object-fit:cover;transition:1.2s}
-.story-img:hover img{transform:scale(1.05)}
-.story-txt .tag{color:var(--g)}
-.story-txt h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.25;margin-bottom:22px;color:#fff}
-.story-txt h2 em{font-style:italic;color:var(--g)}
-.story-txt p{color:rgba(255,255,255,.72);line-height:1.85;margin-bottom:18px}
-.quote{border-left:3px solid var(--g);padding:16px 0 16px 26px;margin:28px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.12rem;color:rgba(255,255,255,.9);line-height:1.65}
-.facts{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:28px}
-.facts li{display:flex;gap:14px;font-size:.94rem;color:rgba(255,255,255,.72)}
-.facts li::before{content:"—";color:var(--g);font-weight:800;flex-shrink:0}
-.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.pkg{position:relative;background:var(--card);border:1.5px solid var(--ln);border-radius:20px;padding:30px 22px 24px;box-shadow:0 12px 34px rgba(26,18,14,.08);transition:.28s;display:flex;flex-direction:column}
-.pkg:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(26,18,14,.18);border-color:#D4B695}
-.pkg.feat{border-color:var(--o);background:linear-gradient(180deg,#FFF6EE,#fff 60%);box-shadow:0 22px 55px rgba(232,99,42,.22);transform:scale(1.03)}
-.pkg.feat:hover{transform:scale(1.03) translateY(-6px)}
-.pkg.prem{border-color:#8B5A2B;background:linear-gradient(180deg,#1E1813,#2A2019);color:#fff;box-shadow:0 22px 55px rgba(0,0,0,.4)}
-.pkg.prem .ttl{color:#fff}.pkg.prem .sub{color:rgba(255,255,255,.6)}.pkg.prem .amt{color:var(--g)}.pkg.prem .cur{color:rgba(255,255,255,.6)}
-.pkg.prem li{color:rgba(255,255,255,.75)}.pkg.prem li::before{background:rgba(232,176,75,.18);color:var(--g)}
-.pkg.prem .ico{background:rgba(232,176,75,.15)}
-.pbadge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--o),var(--g));color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(232,99,42,.4)}
-.pbadge.dk{background:linear-gradient(135deg,#C99042,var(--g))}
-.ico{width:48px;height:48px;border-radius:13px;background:#FFF0E0;display:grid;place-items:center;font-size:23px;margin-bottom:18px}
-.ttl{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;line-height:1.25;margin-bottom:5px}
-.sub{font-size:.8rem;color:var(--mut);font-weight:600;margin-bottom:20px}
-.price{display:flex;align-items:baseline;gap:5px;margin-bottom:22px}
-.amt{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--ink)}
-.pkg.feat .amt{color:var(--o)}
-.cur{font-size:1rem;font-weight:700;color:var(--mut)}
-.pkg ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px;flex:1}
-.pkg li{display:flex;gap:9px;font-size:.85rem;color:var(--mut);line-height:1.55}
-.pkg li::before{content:"✓";flex:0 0 18px;height:18px;border-radius:50%;background:#E6F4EE;color:#2E7D5B;display:grid;place-items:center;font-size:.62rem;font-weight:900;margin-top:3px}
-.pbtn{width:100%;padding:13px;border-radius:11px;border:1.5px solid var(--ln);background:#fff;color:var(--ink);font-family:inherit;font-size:.88rem;font-weight:800;cursor:pointer;transition:.22s;display:flex;align-items:center;justify-content:center}
-.pbtn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
-.pkg.feat .pbtn{background:linear-gradient(135deg,var(--o),var(--od));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(232,99,42,.32)}
-.pkg.feat .pbtn:hover{background:linear-gradient(135deg,var(--od),#A83E12)}
-.pkg.prem .pbtn{background:linear-gradient(135deg,#C99042,var(--g));color:#1A120E;border-color:transparent;box-shadow:0 10px 24px rgba(232,176,75,.3)}
-.pkg.prem .pbtn:hover{background:linear-gradient(135deg,var(--g),#F0C67A);color:#1A120E}
-#etki{background:linear-gradient(180deg,var(--bg),#F2E9DB)}
-.eff-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.eff-img{border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(26,18,14,.18);aspect-ratio:5/4}
-.eff-img img{width:100%;height:100%;object-fit:cover;transition:1s}
-.eff-img:hover img{transform:scale(1.05)}
-.eff-txt h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.25;margin-bottom:20px}
-.eff-txt h2 em{font-style:italic;color:var(--o)}
-.eff-txt p{color:var(--mut);line-height:1.8;margin-bottom:14px}
-.eff-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-.eff-item{padding:20px;background:#fff;border-radius:13px;border:1px solid var(--ln)}
-.eff-item b{display:block;font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--o);margin-bottom:2px}
-.eff-item span{font-size:.8rem;color:var(--mut);font-weight:600}
-#galeri{background:var(--dk);color:#fff}
-#galeri .tag{color:var(--g)}
-#galeri .sec-head h2{color:#fff}
-#galeri .sec-head h2 em{color:var(--g)}
-#galeri .sec-head p{color:rgba(255,255,255,.65)}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px}
-.gallery figure{position:relative;overflow:hidden;border-radius:12px;cursor:pointer;background:#2A2019;transition:.3s}
-.gallery figure:hover{transform:translateY(-3px);z-index:2}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:1s,filter .3s}
-.gallery figure:hover img{transform:scale(1.08)}
-.gallery figure::after{content:"🔍";position:absolute;right:10px;bottom:10px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;font-size:14px;opacity:0;transform:scale(.7);transition:.3s}
-.gallery figure:hover::after{opacity:1;transform:scale(1)}
-.gt{grid-row:span 2}.gw{grid-column:span 2}.gb{grid-column:span 2;grid-row:span 2}
-.lb{position:fixed;inset:0;background:rgba(10,7,5,.96);display:none;align-items:center;justify-content:center;z-index:999;padding:24px}
-.lb.open{display:flex}
-.lb img{max-width:min(1100px,92vw);max-height:88vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.7)}
-.lb-x{position:absolute;top:24px;right:24px;background:#fff;color:#1A120E;border:0;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer}
-.lb-x:hover{background:var(--o);color:#fff}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.step{background:#fff;border:1.5px solid var(--ln);border-radius:18px;padding:34px 26px;transition:.28s;position:relative;overflow:hidden}
-.step::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--o),var(--g));transform:scaleX(0);transform-origin:left;transition:.4s}
-.step:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(26,18,14,.18);border-color:#D4B695}
-.step:hover::before{transform:scaleX(1)}
-.step-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--o);line-height:1;margin-bottom:16px}
-.step h3{font-size:1.02rem;font-weight:800;margin-bottom:8px}
-.step p{font-size:.88rem;color:var(--mut);line-height:1.7}
-#yorumlar{background:var(--dk2);color:#fff}
-#yorumlar .tag{color:var(--g)}
-#yorumlar .sec-head h2{color:#fff}
-#yorumlar .sec-head h2 em{color:var(--g)}
-#yorumlar .sec-head p{color:rgba(255,255,255,.65)}
-.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.rev{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 24px;transition:.28s}
-.rev:hover{background:rgba(255,255,255,.07);transform:translateY(-4px);border-color:rgba(232,176,75,.3)}
-.stars{color:var(--g);font-size:.92rem;margin-bottom:14px;letter-spacing:3px}
-.rev p{color:rgba(255,255,255,.78);font-size:.92rem;line-height:1.75;margin-bottom:20px;font-style:italic}
-.who{display:flex;align-items:center;gap:11px}
-.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--o),var(--g));display:grid;place-items:center;color:#fff;font-weight:800;font-size:.9rem;flex-shrink:0}
-.who b{display:block;font-size:.88rem;color:#fff}
-.who small{color:rgba(255,255,255,.5);font-size:.74rem}
-.faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
-details{background:#fff;border:1px solid var(--ln);border-radius:13px;padding:0 22px;transition:.2s;overflow:hidden}
-details[open]{border-color:#D4B695;box-shadow:0 12px 34px rgba(26,18,14,.08)}
-summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.4rem;color:var(--o);transition:.25s;flex-shrink:0;line-height:1}
-details[open] summary::after{transform:rotate(45deg)}
-details p{padding:0 0 20px;color:var(--mut);font-size:.9rem;line-height:1.75}
-.cta-wrap{padding:0 0 90px}
-.cta{background:linear-gradient(135deg,rgba(20,16,12,.88),rgba(20,16,12,.72)),url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1600&auto=format&fit=crop') center/cover;border-radius:26px;padding:76px 40px;text-align:center;color:#fff;box-shadow:0 30px 80px rgba(20,16,12,.4)}
-.cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.2;margin-bottom:16px}
-.cta h2 em{font-style:italic;color:var(--g)}
-.cta p{color:rgba(255,255,255,.82);max-width:540px;margin:0 auto 32px;line-height:1.75}
-.cta .btn{background:linear-gradient(135deg,var(--o),var(--od));color:#fff;box-shadow:0 14px 34px rgba(232,99,42,.5)}
-.cta .btn:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(232,99,42,.6)}
-footer{background:var(--dk);color:#fff;padding:56px 0 36px;border-top:1px solid rgba(255,255,255,.06)}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
-.f-logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1rem}
-.f-links{display:flex;gap:24px;flex-wrap:wrap}
-.f-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;font-weight:600;transition:.2s}
-.f-links a:hover{color:var(--g)}
-.f-copy{width:100%;text-align:center;padding-top:26px;margin-top:16px;border-top:1px solid rgba(255,255,255,.06);font-size:.8rem;color:rgba(255,255,255,.4)}
-.float{position:fixed;bottom:24px;right:24px;z-index:90;width:56px;height:56px;border-radius:50%;background:#1877F2;display:grid;place-items:center;box-shadow:0 14px 34px rgba(24,119,242,.5);transition:.25s;text-decoration:none}
-.float:hover{transform:scale(1.1) translateY(-2px)}
-.float svg{width:28px;height:28px;fill:#fff}
-.toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(30px);background:var(--ink);color:#fff;padding:13px 24px;border-radius:13px;font-size:.88rem;font-weight:700;z-index:200;opacity:0;pointer-events:none;transition:.35s;box-shadow:0 16px 40px rgba(0,0,0,.35);max-width:calc(100vw - 40px);text-align:center}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.rv{opacity:0;transform:translateY(28px);transition:.8s}
-.rv.in{opacity:1;transform:none}
-@media(max-width:1024px){
-.packages{grid-template-columns:repeat(2,1fr);gap:24px}
-.pkg.feat{transform:none}.pkg.feat:hover{transform:translateY(-6px)}
-.story-grid,.eff-grid{grid-template-columns:1fr;gap:44px}
-.story-img{max-width:460px;margin:0 auto;aspect-ratio:4/4}
-}
-@media(max-width:900px){
-.gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px}
-.stats{grid-template-columns:repeat(2,1fr);gap:28px 0}
-.stat+.stat{border-left:0}
-.stat:nth-child(2n){border-left:1px solid rgba(255,255,255,.1)}
-.revs{grid-template-columns:1fr;max-width:480px;margin:0 auto}
-.steps{grid-template-columns:1fr}
-}
-@media(max-width:760px){
-.nav-links{position:absolute;top:74px;left:0;right:0;background:rgba(20,16,12,.97);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;padding:14px 20px 20px;gap:4px;border-bottom:1px solid rgba(255,255,255,.08);display:none}
-.nav-links.open{display:flex}
-.nav-links a{padding:12px 8px;border-radius:9px}
-.nav-cta{text-align:center;margin-top:6px}
-.burger{display:block}
-.hero{min-height:auto;padding:110px 0 80px}
-.hero h1{font-size:clamp(1.8rem,7.6vw,2.5rem)}
-.btns{flex-direction:column}.btns .btn{width:100%;justify-content:center}
-section{padding:68px 0}
-.packages{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:10px}
-.gb{grid-column:span 2;grid-row:span 1}
-.gw{grid-column:span 2}.gt{grid-row:span 1}
-.cta{padding:56px 24px;border-radius:20px}
-.foot{flex-direction:column;text-align:center}
-.f-links{justify-content:center}
-.eff-list{grid-template-columns:1fr}
-}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+    :root {
+        --bg-color: #FDF8F0; /* Sıcak krem */
+        --text-main: #2C221D;
+        --text-muted: #6B5A50;
+        --primary: #E8632A; /* Umut Turuncusu */
+        --primary-hover: #C94E1B;
+        --dark: #1A1512;
+        --border: #EBE3D9;
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
+        --wa-green: #25D366;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: var(--font-body);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.7;
+        overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+
+    /* --- DUYURU ÇUBUĞU --- */
+    .announcement-bar {
+        background: var(--primary);
+        color: #fff;
+        text-align: center;
+        padding: 8px 40px 8px 15px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        position: relative;
+        z-index: 1001;
+    }
+    .close-announce {
+        position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+        background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;
+    }
+
+    /* --- NAVBAR --- */
+    header {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        padding: 20px 0; transition: all 0.4s ease;
+    }
+    body.has-announcement header { top: 36px; }
+    header.scrolled {
+        background: rgba(253, 248, 240, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .nav-container {
+        width: 90%; max-width: 1200px; margin: 0 auto;
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+        font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700;
+        color: #fff; text-decoration: none; letter-spacing: 1px; transition: color 0.3s;
+    }
+    header.scrolled .logo { color: var(--text-main); }
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a {
+        text-decoration: none; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.95rem;
+        transition: color 0.3s; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    header.scrolled .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-nav {
+        background: var(--primary); color: #fff !important;
+        padding: 10px 24px; border-radius: 30px; transition: all 0.3s;
+    }
+    .btn-nav:hover { background: var(--primary-hover); transform: translateY(-2px); }
+    
+    .hamburger { display: none; cursor: pointer; border: none; background: none; }
+    .hamburger span { display: block; width: 25px; height: 3px; background: #fff; margin: 5px 0; transition: 0.3s; }
+    header.scrolled .hamburger span { background: var(--text-main); }
+
+    /* --- HERO --- */
+    .hero {
+        height: 100vh; min-height: 600px; position: relative;
+        display: flex; align-items: center; justify-content: center; text-align: center;
+        background: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+        background-attachment: fixed;
+    }
+    .hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: linear-gradient(to bottom, rgba(26,21,18,0.4), rgba(26,21,18,0.85));
+    }
+    .hero-content { position: relative; z-index: 1; color: #fff; max-width: 800px; padding: 0 20px; }
+    .hero-subtitle {
+        font-size: 0.9rem; text-transform: uppercase; letter-spacing: 4px; font-weight: 600;
+        color: #F2A93B; margin-bottom: 20px; display: block;
+    }
+    .hero h1 {
+        font-family: var(--font-heading); font-size: clamp(3rem, 6vw, 5rem);
+        line-height: 1.1; margin-bottom: 25px; font-weight: 600;
+    }
+    .hero h1 em { font-style: italic; color: #F2A93B; }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px; color: rgba(255,255,255,0.9); }
+    .btn {
+        display: inline-block; padding: 16px 40px; border-radius: 40px;
+        text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s;
+        background: var(--primary); color: #fff; border: 2px solid var(--primary); cursor: pointer;
+    }
+    .btn:hover { background: transparent; border-color: #fff; color: #fff; }
+    .btn-outline { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 15px; }
+    .btn-outline:hover { background: #fff; color: var(--text-main); border-color: #fff; }
+
+    /* --- ABOUT --- */
+    .section { padding: 100px 0; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-img { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; }
+    .about-img:hover img { transform: scale(1.05); }
+    .about-text h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 25px; line-height: 1.2; }
+    .about-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; }
+    .quote {
+        border-left: 4px solid var(--primary); padding-left: 20px; margin: 30px 0;
+        font-family: var(--font-heading); font-size: 1.3rem; font-style: italic; color: var(--text-main);
+    }
+
+    /* --- BAĞIŞ PAKETLERİ --- */
+    .menu-bg { background-color: #F4EFE6; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 15px; }
+    .section-title p { color: var(--text-muted); font-size: 1.1rem; }
+
+    .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    
+    .package-card {
+        background: #fff; padding: 30px 25px; border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.04); display: flex; flex-direction: column;
+        border: 1.5px solid var(--border); transition: all 0.3s; position: relative;
+    }
+    .package-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: #D4B695; }
+    
+    .package-card.featured {
+        border-color: var(--primary);
+        background: linear-gradient(180deg, #FFF6EE, #fff 50%);
+        box-shadow: 0 15px 40px rgba(232,99,42,0.15);
+    }
+    .package-card.premium {
+        background: var(--dark); color: #fff; border-color: #333;
+    }
+    .package-card.premium .p-title, .package-card.premium .p-price { color: #F2A93B; }
+    .package-card.premium .p-desc { color: rgba(255,255,255,0.7); }
+
+    .p-badge {
+        position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+        background: linear-gradient(135deg, var(--primary), #F2A93B);
+        color: #fff; font-size: 0.7rem; font-weight: 800; padding: 5px 15px;
+        border-radius: 20px; white-space: nowrap; letter-spacing: 0.5px;
+    }
+    .p-icon { font-size: 2rem; margin-bottom: 15px; }
+    .p-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+    .p-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+    .p-price { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; line-height: 1; }
+    .p-price span { font-size: 1rem; color: var(--text-muted); font-weight: 500; }
+    
+    .p-list { list-style: none; margin-bottom: 25px; flex-grow: 1; }
+    .p-list li { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; display: flex; gap: 8px; }
+    .p-list li::before { content: "✓"; color: var(--primary); font-weight: bold; }
+    .package-card.premium .p-list li { color: rgba(255,255,255,0.8); }
+
+    .p-btn {
+        width: 100%; padding: 12px; border-radius: 10px; border: 2px solid var(--border);
+        background: #fff; color: var(--text-main); font-weight: 700; cursor: pointer; transition: all 0.3s;
+        font-family: var(--font-body); font-size: 0.95rem;
+    }
+    .p-btn:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+    .package-card.featured .p-btn { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .package-card.featured .p-btn:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+    .package-card.premium .p-btn { background: #F2A93B; color: var(--dark); border-color: #F2A93B; }
+    .package-card.premium .p-btn:hover { background: #E8B04B; }
+
+    /* --- GALERİ (LIGHTBOX) --- */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 16px; cursor: pointer; transition: transform 0.4s, box-shadow 0.4s; }
+    .gallery-grid img:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+
+    .lightbox {
+        position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000;
+        display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 90vh; border-radius: 10px; }
+    .lightbox-close { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 40px; cursor: pointer; }
+
+    /* --- YORUMLAR --- */
+    .reviews-bg { background: #fff; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .review-card { background: var(--bg-color); padding: 30px; border-radius: 16px; border: 1px solid var(--border); }
+    .stars { color: #F2A93B; font-size: 1.2rem; margin-bottom: 15px; }
+    .review-card p { font-style: italic; color: var(--text-muted); margin-bottom: 20px; }
+    .reviewer { font-weight: 700; color: var(--dark); }
+
+    /* --- CONTACT & FORM --- */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: #fff; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+    .contact-info { padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+    .contact-info h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 20px; }
+    .info-item { margin-bottom: 20px; display: flex; gap: 15px; align-items: flex-start; }
+    .info-icon { font-size: 1.5rem; color: var(--primary); }
+    .info-text strong { display: block; font-size: 1.1rem; margin-bottom: 5px; color: var(--dark); }
+    .info-text span, .info-text a { color: var(--text-muted); text-decoration: none; }
+    .info-text a:hover { color: var(--primary); }
+    
+    .contact-form { padding: 50px; background: #F9F6F0; }
+    .contact-form h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 20px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group input, .form-group textarea, .form-group select {
+        width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 8px;
+        font-family: var(--font-body); font-size: 1rem; background: #fff; outline: none; transition: 0.3s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--primary); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    
+    .map-container iframe { width: 100%; height: 100%; min-height: 400px; border: none; }
+
+    /* --- FOOTER --- */
+    footer { background: var(--dark); color: #fff; padding: 50px 0 30px; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+    .socials { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; }
+    .socials a { color: #fff; text-decoration: none; font-size: 1.5rem; transition: color 0.3s; }
+    .socials a:hover { color: var(--primary); }
+    
+    .whatsapp-float {
+        position: fixed; bottom: 30px; right: 30px; z-index: 1000;
+        background: var(--wa-green); width: 60px; height: 60px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: transform 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 35px; height: 35px; fill: #fff; }
+
+    /* --- ANIMASYONLAR --- */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1024px) {
+        .packages-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    }
+    @media (max-width: 900px) {
+        .about-grid, .contact-grid, .reviews-grid { grid-template-columns: 1fr; }
+        .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        .contact-info, .contact-form { padding: 30px; }
+        .hero h1 { font-size: 2.8rem; }
+        .btn-outline { margin-left: 0; margin-top: 15px; display: block; }
+        
+        .nav-links {
+            position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-color);
+            flex-direction: column; padding: 20px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path 0.4s ease;
+        }
+        .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+        .nav-links a { color: var(--text-main) !important; padding: 10px 0; }
+        .hamburger { display: block; }
+    }
+    @media (max-width: 600px) {
+        .gallery-grid { grid-template-columns: 1fr; }
+        .packages-grid { grid-template-columns: 1fr; }
+        .section { padding: 70px 0; }
+        .section-title h2 { font-size: 2.2rem; }
+        .floating-btns { bottom: 20px; right: 20px; }
+    }
 </style>
 </head>
-<body>
+<body class="has-announcement">
 
-<header id="hdr">
-<div class="wrap nav">
-<a href="#" class="logo"><div class="logo-mark">🇵🇸</div><span>Gazze'ye Umut</span></a>
-<nav class="nav-links" id="nl">
-<a href="#hikaye">Hikâye</a>
-<a href="#paketler">Paketler</a>
-<a href="#galeri">Galeri</a>
-<a href="#sss">S.S.S.</a>
-<a class="nav-cta" href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" rel="noopener">Bağış Yap</a>
-</nav>
-<button class="burger" id="bg" aria-label="Menü"><span></span><span></span><span></span></button>
-</div>
-</header>
+    <!-- DUYURU ÇUBUĞU -->
+    <div class="announcement-bar" id="announcement">
+        💛 Bugün bir çocuğun sofrasına dokunun. Her bağış bir umuttur.
+        <button class="close-announce" onclick="closeAnnouncement()">✕</button>
+    </div>
 
-<section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-c">
-<div class="eyebrow"><span class="dot"></span> Gazze'de Bir Çocuğun Umudu Ol</div>
-<h1>Bugün aç yatan bir çocuk,<br><em>yarın bir umut olabilir.</em></h1>
-<p class="lead">Gazze'de her gün binlerce çocuk açlıkla, susuzlukla ve soğukla mücadele ediyor. Evlerinden edilmiş, okullarından uzak, bir öğün sıcak yemeğe hasret. Küçük bir katkın, bir çocuğun gününü değiştirebilir.</p>
-<div class="btns">
-<a href="#paketler" class="btn btn-p">Destek Ol →</a>
-<a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" rel="noopener" class="btn btn-o">Facebook'tan Yaz</a>
-</div>
-</div>
-</section>
+    <!-- NAVBAR -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Afrika'ya Umut</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <nav class="nav-links" id="nav-links">
+                <a href="#hikayemiz">Hikayemiz</a>
+                <a href="#paketler">Bağış Paketleri</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#iletisim">İletişim</a>
+                <a href="#iletisim" class="btn-nav">Hemen Bağış Yap</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="stats-bar">
-<div class="wrap stats">
-<div class="stat"><b data-n="1" data-s="M+">0</b><span>Yerinden edilmiş çocuk</span></div>
-<div class="stat"><b data-n="2" data-s="M+">0</b><span>İnsani yardıma muhtaç</span></div>
-<div class="stat"><b data-n="100" data-s="%">0</b><span>Şeffaf bağış süreci</span></div>
-<div class="stat"><b data-n="7" data-s="/24">0</b><span>Facebook iletişim</span></div>
-</div>
-</div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="hero-subtitle">Bir Paket, Bir Umut</span>
+            <h1>Bugün aç yatan bir çocuk,<br><em>yarın bir umut olabilir.</em></h1>
+            <p>Afrika'nın dört bir yanında milyonlarca çocuk, temiz suya ve bir öğün sıcak yemeğe hasret. Küçük bir katkı, bir çocuğun gününü, belki de geleceğini değiştirebilir.</p>
+            <div>
+                <a href="#paketler" class="btn">Bağış Paketlerini Gör</a>
+                <a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" class="btn btn-outline">Facebook'tan Yaz</a>
+            </div>
+        </div>
+    </section>
 
-<section id="hikaye" class="story">
-<div class="wrap story-grid">
-<div class="story-img rv">
-<!-- DÜZELTİLEN GÖRSEL -->
-<img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1000&auto=format&fit=crop" alt="Gazze'de yardım" loading="lazy">
-</div>
-<div class="story-txt rv">
-<span class="tag">Gerçek Bir Hikâye</span>
-<h2>Bir çocuğun gözlerinde,<br><em>savaşın bile silemediği bir umut.</em></h2>
-<p>Gazze'de bir çocuk, her sabah gözlerini açtığında önce sesleri dinliyor. Sonra ailesini kontrol ediyor. Sonra… yemek var mı diye bakıyor. Bu, milyonlarca çocuğun her günü.</p>
-<p>Evleri yıkıldı, okulları kapandı, mahalleleri tanınmaz hâle geldi. Ama çocuklar hâlâ gülümsemeyi, oynamayı, umut etmeyi biliyor. Biz de onlar için buradayız.</p>
-<blockquote class="quote">"Bir çocuğun gülümsemesi, savaşın bile gölgeleyemediği bir ışıktır."</blockquote>
-<p>Senin küçük bir katkın, bir çocuğun sofrasına bir öğün daha eklemek, başına bir battaniye, eline bir oyuncak vermek demek. Biz sadece bir köprüyüz — seninle onlar arasında.</p>
-<ul class="facts">
-<li>Gazze'de 1 milyondan fazla çocuk evinden edildi.</li>
-<li>Temiz suya erişim kritik seviyenin altında; çoğu aile günlük suyunu kuyulardan taşıyor.</li>
-<li>Her gün yüzlerce çocuk yetersiz beslenmeyle karşı karşıya.</li>
-</ul>
-</div>
-</div>
-</section>
+    <!-- HAKKIMIZDA -->
+    <section class="section" id="hikayemiz">
+        <div class="container about-grid">
+            <div class="about-img reveal">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000&auto=format&fit=crop" alt="Afrika'da Bir Çocuk">
+            </div>
+            <div class="about-text reveal">
+                <h2>Bir Bardak Su,<br>Bir Ömür Demek.</h2>
+                <p>Sabahın erken saatlerinde, henüz güneş doğmamışken yola çıkıyor. Saatlerce yürüyor. Tek bir amaç için: ailesine bir kova su taşımak. Oysa o su, çoğu zaman temiz değil. Ama başka seçenek yok. Bu, Afrika'da milyonlarca çocuğun her günü.</p>
+                <p>Biz, bu sessizliği duymak ve bir şeyler yapmak için buradayız. Senin küçük bir katkın, bir çocuğun sofrasına bir öğün daha eklemek demek. Biz sadece bir köprüyüz — seninle onlar arasında.</p>
+                <blockquote class="quote">"Açlık sessizdir. Ama bir çocuğun gözlerinde konuşur."</blockquote>
+            </div>
+        </div>
+    </section>
 
-<section id="paketler">
-<div class="wrap">
-<div class="sec-head rv">
-<span class="tag">Bağış Paketleri</span>
-<h2>Bir paket seç, <em>bir hayat dokun.</em></h2>
-<p>Her paket doğrudan Gazze'deki çocuklara ve ailelere ulaşır. Paket seçtikten sonra Facebook üzerinden bize ulaş, süreci birlikte yürütelim.</p>
-</div>
-<div class="packages">
+    <!-- BAĞIŞ PAKETLERİ -->
+    <section class="section menu-bg" id="paketler">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Bağış Paketlerimiz</h2>
+                <p>Her paket doğrudan ihtiyaç sahibi çocuklara ulaşır. Bir paket seç, farkın parçası ol.</p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- 350 -->
+                <div class="package-card reveal">
+                    <div class="p-icon">🍲</div>
+                    <h3 class="p-title">4 Kişilik Paket</h3>
+                    <p class="p-desc">Bir öğün, bir gülümseme</p>
+                    <div class="p-price">350<span>₺</span></div>
+                    <ul class="p-list">
+                        <li>4 kişilik sıcak yemek</li>
+                        <li>Temiz içme suyu</li>
+                        <li>Bağış süreci takibi</li>
+                    </ul>
+                    <button class="p-btn" data-p="4 Kişilik Paket" data-f="350" onclick="selectPackage('4 Kişilik Paket (350₺)')">Bağış Yap</button>
+                </div>
 
-<div class="pkg rv">
-<div class="ico">🍲</div>
-<h3 class="ttl">4 Kişilik Paket</h3>
-<p class="sub">Bir öğün, bir gülümseme</p>
-<div class="price"><span class="amt">350</span><span class="cur">₺</span></div>
-<ul><li>4 kişilik sıcak yemek</li><li>Temiz içme suyu</li><li>Bağış süreci takibi</li></ul>
-<button class="pbtn" data-p="4 Kişilik Paket" data-f="350">Bağış Yap → 350₺</button>
-</div>
+                <!-- 650 ÖNE ÇIKAN -->
+                <div class="package-card featured reveal">
+                    <div class="p-badge">En Çok Tercih Edilen</div>
+                    <div class="p-icon">🌱</div>
+                    <h3 class="p-title">6 Kişilik Paket</h3>
+                    <p class="p-desc">Bir haftalık umut</p>
+                    <div class="p-price">650<span>₺</span></div>
+                    <ul class="p-list">
+                        <li>6 kişilik sıcak yemek</li>
+                        <li>Temiz içme suyu</li>
+                        <li>Hijyen kiti desteği</li>
+                        <li>Bağış süreci takibi</li>
+                    </ul>
+                    <button class="p-btn" data-p="6 Kişilik Paket" data-f="650" onclick="selectPackage('6 Kişilik Paket (650₺)')">Bağış Yap</button>
+                </div>
 
-<div class="pkg feat rv">
-<div class="pbadge">En Çok Tercih Edilen</div>
-<div class="ico">🌱</div>
-<h3 class="ttl">6 Kişilik Paket</h3>
-<p class="sub">Bir haftalık umut</p>
-<div class="price"><span class="amt">650</span><span class="cur">₺</span></div>
-<ul><li>6 kişilik sıcak yemek</li><li>Temiz içme suyu</li><li>Hijyen kiti desteği</li><li>Bağış süreci takibi</li></ul>
-<button class="pbtn" data-p="6 Kişilik Paket" data-f="650">Bağış Yap → 650₺</button>
-</div>
+                <!-- 1000 -->
+                <div class="package-card reveal">
+                    <div class="p-icon">💛</div>
+                    <h3 class="p-title">8 Kişilik Paket</h3>
+                    <p class="p-desc">Bir sofra, bir umut</p>
+                    <div class="p-price">1000<span>₺</span></div>
+                    <ul class="p-list">
+                        <li>8 kişilik sıcak yemek</li>
+                        <li>Temiz içme suyu</li>
+                        <li>Hijyen kiti desteği</li>
+                        <li>Eğitim materyali</li>
+                    </ul>
+                    <button class="p-btn" data-p="8 Kişilik Paket" data-f="1000" onclick="selectPackage('8 Kişilik Paket (1000₺)')">Bağış Yap</button>
+                </div>
 
-<div class="pkg rv">
-<div class="ico">💛</div>
-<h3 class="ttl">8 Kişilik Paket</h3>
-<p class="sub">Bir sofra, bir umut</p>
-<div class="price"><span class="amt">1000</span><span class="cur">₺</span></div>
-<ul><li>8 kişilik sıcak yemek</li><li>Temiz içme suyu</li><li>Hijyen kiti desteği</li><li>Eğitim materyali</li><li>Bağış süreci takibi</li></ul>
-<button class="pbtn" data-p="8 Kişilik Paket" data-f="1000">Bağış Yap → 1000₺</button>
-</div>
+                <!-- 3000 PREMIUM -->
+                <div class="package-card premium reveal">
+                    <div class="p-badge" style="background:linear-gradient(135deg, #C99042, #F2A93B);">En Kapsamlı</div>
+                    <div class="p-icon">🌟</div>
+                    <h3 class="p-title">20+ Kişilik Paket</h3>
+                    <p class="p-desc">Bir köy, bir gelecek</p>
+                    <div class="p-price">3000<span>₺</span></div>
+                    <ul class="p-list">
+                        <li>20+ kişilik sıcak yemek</li>
+                        <li>Haftalık temiz su temini</li>
+                        <li>Toplu hijyen kiti</li>
+                        <li>Eğitim materyalleri</li>
+                        <li>Teşekkür fotoğrafları</li>
+                    </ul>
+                    <button class="p-btn" data-p="20+ Kişilik Paket" data-f="3000" onclick="selectPackage('20+ Kişilik Paket (3000₺)')">Bağış Yap</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="pkg prem rv">
-<div class="pbadge dk">En Kapsamlı</div>
-<div class="ico">🌟</div>
-<h3 class="ttl">20+ Kişilik Paket</h3>
-<p class="sub">Bir aile, bir gelecek</p>
-<div class="price"><span class="amt">3000</span><span class="cur">₺</span></div>
-<ul><li>20+ kişilik sıcak yemek</li><li>Haftalık temiz su temini</li><li>Battaniye & hijyen kiti</li><li>Çocuklara oyuncak & kitap</li><li>Öncelikli süreç takibi</li><li>Teşekkür fotoğrafları</li></ul>
-<button class="pbtn" data-p="20+ Kişilik Paket" data-f="3000">Bağış Yap → 3000₺</button>
-</div>
+    <!-- GALERİ (LIGHTBOX) -->
+    <section class="section" id="galeri">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Bir Fotoğraf, Bin Hikaye</h2>
+                <p>Bağışların ulaştığı anlardan kareler. Fotoğraflara tıklayarak büyütebilirsiniz.</p>
+            </div>
+            <div class="gallery-grid">
+                <img class="reveal" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop" alt="Çocuklar" onclick="openLightbox(this.src)">
+                <img class="reveal" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=800&auto=format&fit=crop" alt="Portre" onclick="openLightbox(this.src)">
+                <img class="reveal" src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=800&auto=format&fit=crop" alt="Umut" onclick="openLightbox(this.src)">
+                <img class="reveal" src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=800&auto=format&fit=crop" alt="Doğa" onclick="openLightbox(this.src)">
+                <img class="reveal" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800&auto=format&fit=crop" alt="Afrika" onclick="openLightbox(this.src)">
+                <img class="reveal" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=800&auto=format&fit=crop" alt="Yardım" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
 
-</div>
-</div>
-</section>
+    <!-- YORUMLAR -->
+    <section class="section reviews-bg" id="yorumlar">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Bağışçılarımız Ne Diyor?</h2>
+                <p>Birlikte başardıklarımızın küçük yansımaları.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Küçük bir katkıyla bu kadar fark yaratabileceğimi bilmiyordum. Süreç boyunca her adımda bilgilendirildim, çok mutluyum."</p>
+                    <div class="reviewer">— Ayşe Y.</div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Facebook üzerinden iletişim çok kolaydı. Bağışımızın yerine ulaştığını fotoğraflarla gördük. Emeğinize sağlık."</p>
+                    <div class="reviewer">— Mehmet K.</div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Her ay düzenli destek veriyorum. Oradaki bir çocuğun gülümsemesi her şeye değer. Dayanışmayla güçlüyüz."</p>
+                    <div class="reviewer">— Selin D.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="etki">
-<div class="wrap eff-grid">
-<div class="eff-img rv">
-<!-- DÜZELTİLEN GÖRSEL -->
-<img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1000&auto=format&fit=crop" alt="Yardım kolileri" loading="lazy">
-</div>
-<div class="eff-txt rv">
-<span class="tag">Birlikte Başardıklarımız</span>
-<h2>Her bağış, <em>somut bir fark.</em></h2>
-<p>Bağışların nereye gittiğini biliyoruz. Her kuruş, doğrudan Gazze'deki ihtiyaç sahibi çocuklara ve ailelere ulaşıyor. Biz sadece bir köprüyüz — seninle onlar arasında.</p>
-<p>Sürecin her adımını Facebook üzerinden şeffaf bir şekilde paylaşıyoruz. Fotoğraflarla, videolarla, gerçek hikâyelerle…</p>
-<div class="eff-list">
-<div class="eff-item"><b>15.000+</b><span>Ulaşılan çocuk</span></div>
-<div class="eff-item"><b>40.000+</b><span>Dağıtılan öğün</span></div>
-<div class="eff-item"><b>2.500+</b><span>Desteklenen aile</span></div>
-<div class="eff-item"><b>%100</b><span>Doğrudan ulaşım</span></div>
-</div>
-</div>
-</div>
-</section>
+    <!-- İLETİŞİM VE BAĞIŞ FORMU -->
+    <section class="section" id="iletisim" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid reveal">
+                <!-- Bilgiler -->
+                <div class="contact-info">
+                    <h2>Bize Ulaşın</h2>
+                    <div class="info-item">
+                        <span class="info-icon">💛</span>
+                        <div class="info-text">
+                            <strong>Amacımız</strong>
+                            <span>Afrika'daki çocukların temel ihtiyaçlarına (gıda, su, eğitim) doğrudan destek olmak.</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div class="info-text">
+                            <strong>İletişim</strong>
+                            <span>Tüm süreçlerimiz Facebook üzerinden yürütülmektedir.</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📸</span>
+                        <div class="info-text">
+                            <strong>Facebook</strong>
+                            <a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank">Bize Ulaşın</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Netlify Form -->
+                    <form name="bagis-formu" method="POST" data-netlify="true" style="margin-top: 20px;">
+                        <input type="hidden" name="form-name" value="bagis-formu" />
+                        <div class="form-group">
+                            <input type="text" name="isim" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="iletisim" placeholder="Telefon veya E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="paket" id="paket-sec" required>
+                                <option value="">-- Bağış Paketi Seçin --</option>
+                                <option value="4 Kişilik Paket (350₺)">4 Kişilik Paket (350₺)</option>
+                                <option value="6 Kişilik Paket (650₺)">6 Kişilik Paket (650₺)</option>
+                                <option value="8 Kişilik Paket (1000₺)">8 Kişilik Paket (1000₺)</option>
+                                <option value="20+ Kişilik Paket (3000₺)">20+ Kişilik Paket (3000₺)</option>
+                                <option value="Kendi Tutarım">Kendi Tutarım (Belirteceğim)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mesaj" placeholder="Eklemek istedikleriniz (İsteğe Bağlı)"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; border-radius: 8px; padding: 12px;">Bağış Formunu Gönder</button>
+                    </form>
+                </div>
+                
+                <!-- Görsel veya Harita Yerine Etkileyici Bir Görsel -->
+                <div class="map-container" style="background: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1000&auto=format&fit=crop') center/cover;">
+                    <!-- Görsel arka plan olarak kullanıldı -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="galeri">
-<div class="wrap">
-<div class="sec-head rv">
-<span class="tag">Galeri</span>
-<h2>Bir fotoğraf, <em>bin hikâye.</em></h2>
-<p>Bağışların ulaştığı anlardan kareler. Fotoğrafa tıklayarak büyütebilirsin.</p>
-</div>
-<div class="gallery rv" id="gal">
-<!-- DÜZELTİLEN GÖRSELLER -->
-<figure class="gb" data-s="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1600&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=900&auto=format&fit=crop" alt="Yardım" loading="lazy"></figure>
-<figure class="gt" data-s="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=800&auto=format&fit=crop" alt="Çocuk" loading="lazy"></figure>
-<figure data-s="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=800&auto=format&fit=crop" alt="Koli" loading="lazy"></figure>
-<figure data-s="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop" alt="Umut" loading="lazy"></figure>
-<figure class="gw" data-s="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1600&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1000&auto=format&fit=crop" alt="Yardım" loading="lazy"></figure>
-<figure data-s="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=800&auto=format&fit=crop" alt="Çocuklar" loading="lazy"></figure>
-<figure data-s="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800&auto=format&fit=crop" alt="Yardım" loading="lazy"></figure>
-<figure class="gw" data-s="https://images.unsplash.com/photo-1504814532849-cff240a44c48?q=80&w=1600&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1504814532849-cff240a44c48?q=80&w=1000&auto=format&fit=crop" alt="Dayanışma" loading="lazy"></figure>
-<figure class="gt" data-s="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=800&auto=format&fit=crop" alt="Umut" loading="lazy"></figure>
-<figure data-s="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1400&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=800&auto=format&fit=crop" alt="Gıda" loading="lazy"></figure>
-</div>
-</div>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="socials">
+                <a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank">📘 Facebook</a>
+            </div>
+            <p>&copy; 2024 Afrika'ya Umut. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #666;">Tüm bağışlar Facebook üzerinden alınmaktadır.</p>
+        </div>
+    </footer>
 
-<section id="nasil">
-<div class="wrap">
-<div class="sec-head rv">
-<span class="tag">Süreç</span>
-<h2>Üç adımda <em>bağışını tamamla.</em></h2>
-<p>Karmaşık süreç yok. Bir paket seç, mesajını gönder, gerisini bize bırak.</p>
-</div>
-<div class="steps">
-<div class="step rv"><div class="step-n">01</div><h3>Paketini seç</h3><p>350₺, 650₺, 1000₺ veya 3000₺'lik paketlerden sana uygun olanı seç, üzerine tıkla.</p></div>
-<div class="step rv"><div class="step-n">02</div><h3>Facebook'tan yaz</h3><p>Butona tıkladığında mesajın otomatik kopyalanır ve Facebook sayfamız yeni sekmede açılır.</p></div>
-<div class="step rv"><div class="step-n">03</div><h3>Bağışını tamamla</h3><p>Kopyaladığın mesajı gönder, ödeme ve süreç detaylarını sana özel iletelim.</p></div>
-</div>
-</div>
-</section>
+    <!-- YÜZEN BUTONLAR (Facebook & Yukarı Çık) -->
+    <div class="floating-btns" style="position: fixed; bottom: 30px; right: 30px; z-index: 1500; display: flex; flex-direction: column; gap: 15px;">
+        <a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" class="whatsapp-float" style="position: static; background: #1877F2; box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);" title="Facebook'tan Yaz">
+            <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+    </div>
 
-<section id="yorumlar">
-<div class="wrap">
-<div class="sec-head rv">
-<span class="tag">Bağışçılarımız</span>
-<h2>Onların <em>sözleri.</em></h2>
-<p>Birlikte başardıklarımızın küçük yansımaları.</p>
-</div>
-<div class="revs">
-<div class="rev rv"><div class="stars">★★★★★</div><p>"Gazze'deki çocuklar için bir şeyler yapabilmek beni çok mutlu etti. Süreç boyunca her adımda bilgilendirildim, güven vericiydi."</p><div class="who"><div class="av">AY</div><div><b>Ayşe Y.</b><small>6 Kişilik Paket</small></div></div></div>
-<div class="rev rv"><div class="stars">★★★★★</div><p>"Facebook üzerinden iletişim çok kolaydı. Bağışımızın yerine ulaştığını fotoğraflarla gördük. Emeğinize sağlık."</p><div class="who"><div class="av">MK</div><div><b>Mehmet K.</b><small>3000₺ Paket</small></div></div></div>
-<div class="rev rv"><div class="stars">★★★★★</div><p>"Her ay düzenli destek veriyorum. Oradaki bir çocuğun gülümsemesi her şeye değer. Dayanışmayla güçlüyüz."</p><div class="who"><div class="av">SD</div><div><b>Selin D.</b><small>Düzenli Destekçi</small></div></div></div>
-</div>
-</div>
-</section>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Büyük Görsel">
+    </div>
 
-<section id="sss">
-<div class="wrap">
-<div class="sec-head rv">
-<span class="tag">Sıkça Sorulan Sorular</span>
-<h2>Aklında bir soru mu var?</h2>
-<p>Bağış süreciyle ilgili merak edilenler.</p>
-</div>
-<div class="faq">
-<details class="rv"><summary>Bağışımı nasıl yapıyorum?</summary><p>Paketlerden birini seçtikten sonra Facebook sayfamız yeni sekmede açılır ve hazır mesaj panoya kopyalanır. Mesajı göndererek bağışını başlatabilirsin. Ödeme detayları sana özel mesajla iletilir.</p></details>
-<details class="rv"><summary>Neden Facebook üzerinden?</summary><p>Süreci doğrudan ve şeffaf yürütmek için tüm iletişimi Facebook üzerinden sağlıyoruz. Böylece bağışçılarımızla birebir iletişimde kalıyor, her adımı paylaşabiliyoruz.</p></details>
-<details class="rv"><summary>Bağışımın nereye gittiğini görebilir miyim?</summary><p>Evet. Bağış sonrası süreçle ilgili bilgilendirme yapıyoruz. 3000₺'lik paketlerde fotoğraflarla teyit sağlıyoruz. Dilerseniz Facebook sayfamızdan geçmiş çalışmalarımızı inceleyebilirsin.</p></details>
-<details class="rv"><summary>Daha fazla kişiye ulaşmak istiyorum, ne yapabilirim?</summary><p>Birden fazla paket seçebilir veya kendi tutarını belirleyebilirsin. Facebook üzerinden bize yazman yeterli — size en uygun seçeneği birlikte planlayalım.</p></details>
-</div>
-</div>
-</section>
+    <!-- JS -->
+    <script>
+        // 1. Navbar Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
 
-<div class="cta-wrap">
-<div class="wrap">
-<div class="cta rv">
-<h2>Bugün bir çocuğun<br><em>gülümsemesi ol.</em></h2>
-<p>Bir mesaj, bir bağış, bir umut. Gazze'deki bir çocuğun yüzünü güldürmek için bugün küçük bir adım at.</p>
-<a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" rel="noopener" class="btn">Facebook'tan Bize Ulaş</a>
-</div>
-</div>
-</div>
+        // 2. Mobil Menü
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
 
-<footer>
-<div class="wrap">
-<div class="foot">
-<div class="f-logo"><div class="logo-mark">🇵🇸</div><span>Gazze'ye Umut</span></div>
-<div class="f-links">
-<a href="#hikaye">Hikâye</a><a href="#paketler">Paketler</a><a href="#galeri">Galeri</a><a href="#sss">S.S.S.</a><a href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" rel="noopener">Facebook</a>
-</div>
-</div>
-<p class="f-copy">© <span id="yr"></span> Gazze'ye Umut — Tüm bağışlar Facebook üzerinden alınmaktadır.</p>
-</div>
-</footer>
+        // 3. Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => revealObserver.observe(el));
 
-<a class="float" href="https://www.facebook.com/share/1JGgiDXSkf/" target="_blank" rel="noopener" aria-label="Facebook">
-<svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
-</a>
+        // 4. Lightbox (Galeri Büyütme)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
 
-<div class="lb" id="lb"><button class="lb-x" id="lbx">✕</button><img id="lbi" alt=""></div>
-<div class="toast" id="tt"></div>
+        function openLightbox(src) {
+            lightbox.classList.add('active');
+            lightboxImg.src = src;
+            document.body.style.overflow = 'hidden';
+        }
 
-<script>
-const FB="https://www.facebook.com/share/1JGgiDXSkf/";
-const BR="Gazze'ye Umut";
-document.getElementById('yr').textContent=new Date().getFullYear();
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
 
-const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('sc',scrollY>40),{passive:true});
+        // 5. Duyuru Çubuğu Kapatma
+        function closeAnnouncement() {
+            document.getElementById('announcement').style.display = 'none';
+            document.body.classList.remove('has-announcement');
+            document.getElementById('header').style.top = '0';
+        }
 
-const bg=document.getElementById('bg'),nl=document.getElementById('nl');
-bg.onclick=()=>nl.classList.toggle('open');
-nl.querySelectorAll('a').forEach(a=>a.onclick=()=>nl.classList.remove('open'));
-
-let tm;
-function toast(m){const t=document.getElementById('tt');t.textContent=m;t.classList.add('show');clearTimeout(tm);tm=setTimeout(()=>t.classList.remove('show'),4000)}
-
-document.querySelectorAll('.pbtn').forEach(b=>{
-b.onclick=async()=>{
-const p=b.dataset.p,f=b.dataset.f;
-const msg=`Merhaba! ${BR} sayfanızdan geliyorum.\n"${p}" (${f} ₺) ile bağış yapmak istiyorum.\nÖdeme ve süreç hakkında bilgi alabilir miyim?`;
-try{await navigator.clipboard.writeText(msg);toast('✓ Mesaj kopyalandı — Facebook\'a yönlendiriliyorsun')}catch{toast('Facebook sayfasına yönlendiriliyorsun')}
-setTimeout(()=>open(FB,'_blank','noopener'),350)
-}
-});
-
-const io=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting){setTimeout(()=>x.target.classList.add('in'),i*70);io.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.rv').forEach(x=>io.observe(x));
-
-document.querySelectorAll('[data-n]').forEach(el=>{
-const io2=new IntersectionObserver(e=>{if(e[0].isIntersecting){
-const t=+el.dataset.n,s=el.dataset.s||'',st=performance.now(),d=1500;
-function tick(n){const p=Math.min((n-st)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(tick)}
-requestAnimationFrame(tick);io2.unobserve(el)
-}},{threshold:.4});
-io2.observe(el)
-});
-
-const lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbx=document.getElementById('lbx');
-document.querySelectorAll('#gal figure').forEach(f=>{
-f.onclick=()=>{lbi.src=f.dataset.s||f.querySelector('img').src;lb.classList.add('open');document.body.style.overflow='hidden'}
-});
-function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lbi.src=''}
-lbx.onclick=closeLb;
-lb.onclick=e=>{if(e.target===lb)closeLb()};
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
-</script>
+        // 6. Paket Seçimi ve Forma Kaydırma
+        function selectPackage(packageName) {
+            const select = document.getElementById('paket-sec');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value === packageName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('iletisim').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
